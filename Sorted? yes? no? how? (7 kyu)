@@ -1,0 +1,13 @@
+function isSortedAndHow(array) {
+    let y=[...array].sort((a,b)=>a-b)
+     let z=[...array].sort((a,b)=>b-a)
+     if(array.join('')===y.join('')){
+       return 'yes, ascending'
+     }
+     else if(array.join('')===z.join('')){
+       return 'yes, descending'
+     }
+     else{
+       return 'no'
+     }
+     }
