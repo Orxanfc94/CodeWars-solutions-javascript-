@@ -1,0 +1,21 @@
+function nums(s){
+     let letters=[ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+   'M', 'N', 'O', 'P', 'Q', 'R',  'S', 'T', 'U', 'V', 'W', 'X',
+   'Y', 'Z' ]
+
+   let x=letters.map(letter=>letter.toLowerCase())
+
+   let f=[]
+   for(let i=0;i<s.length;i++){
+     for(let j=0;j<x.length;j++){
+         if(s[i]==x[j].charCodeAt()){
+             let a={}
+             a[s[i]]=x[j]
+
+             f.push(a)
+         }
+     }
+   }
+ return f
+
+ }
