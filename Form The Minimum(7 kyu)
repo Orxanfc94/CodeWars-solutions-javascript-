@@ -1,0 +1,10 @@
+ function minValue(values){
+      //your code here
+      let f=[]
+      for(let i=0;i<values.length;i++){
+        if(!f.includes(values[i])){
+          f.push(values[i])
+        }
+      }
+      return Number(f.sort((a,b)=>a-b).join(''))
+    }
