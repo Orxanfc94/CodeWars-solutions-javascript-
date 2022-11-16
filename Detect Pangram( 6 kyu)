@@ -1,0 +1,16 @@
+function isPangram(string){
+    let letters=[ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+   'M', 'N', 'O', 'P', 'Q', 'R',  'S', 'T', 'U', 'V', 'W', 'X',
+   'Y', 'Z' ]
+   let letter=letters.map(let=>let.toLowerCase())
+let x=string.toLowerCase().replace(/[^A-Za-z0-9\s!?]/g,'').replace(/\s/g, '')
+let y=x.split('')
+let f=[]
+for(let i=0;i<x.length;i++){
+    if(letter.includes(x[i])&&!f.includes(x[i])){
+        f.push(x[i])
+    }
+}
+return f.length==26? true:false
+
+}
